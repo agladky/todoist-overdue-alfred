@@ -1,6 +1,6 @@
-Alfred workflow for Todoist
+#### Todoist overdue to today
 
-Moves all overdue tasks to today in Todoist.
+Alfred workflow to move all overdue tasks to today in Todoist
 
 For installing, download Todoist overdue.alfredworkflow and import into Alfred.
 

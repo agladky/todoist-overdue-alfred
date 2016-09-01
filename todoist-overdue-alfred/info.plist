@@ -64,7 +64,7 @@
 	<key>createdby</key>
 	<string>Anatoly Gladky</string>
 	<key>description</key>
-	<string>Move all overdue tasks to today</string>
+	<string>Moves all overdue tasks to today</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -100,7 +100,7 @@
 				<key>keyword</key>
 				<string>tot</string>
 				<key>subtext</key>
-				<string>Move all overdue tasks to today</string>
+				<string>Moves all overdue tasks to today</string>
 				<key>text</key>
 				<string>Todoist overdue to today</string>
 				<key>withspace</key>
@@ -183,12 +183,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Plugin for Todoist
-
-Moves all overdue tasks to today in Todoist
-
-For using, insert you token as variable in "Value" field.
-Get it from "Todoist settings" -> "Account" -> "API token".
+	<string>
 	</string>
 	<key>uidata</key>
 	<dict>
