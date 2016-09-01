@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
+
+u"""Moves all overdue tasks to today in Todoist by token API"""
+
 import sys
+import os.path
+
+sys.path.insert(0, os.path.join(os.getcwd(), 'lib'))
+
 from todoist import TodoistAPI
 from datetime import datetime
 from datetime import timedelta
-from os.path import expanduser
 from dateutil.parser import parse
 import argparse
 import pytz
-import ConfigParser
 
 
 def today_actions(todoist_api):
@@ -24,28 +29,20 @@ def today_actions(todoist_api):
 
 
 def _fail_if_contains_errors(items):
-    if isinstance(items, dict) and items.get('error_code') == 400:
-        sys.exit("Access for the current token is denied. Please set another token with -t argument.")
+    if isinstance(items, dict) and (items.get('error_code') == 400 or items.get('error_code') == 401):
+        print "Invalid token. Set another in workflow."
+        sys.exit(1)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Moving overdue tasks for today in todoist")
-    parser.add_argument("-t", "--token", help="Todoist API token")
+    parser.add_argument("-t", "--token", help="Todoist API token", nargs='?')
     args = parser.parse_args()
-
-    config = ConfigParser.ConfigParser()
-    config.read(expanduser('~') + "/.todoist")
 
     token = args.token
     if token is None:
-        token = config.get('Global', 'TokenAPI') if config.has_option('Global', 'TokenAPI') else sys.exit(
-            "Please, set a todoist token with -t argument")
-    else:
-        if not config.has_section('Global'):
-            config.add_section('Global')
-        config.set('Global', 'TokenAPI', token)
-        with open(expanduser('~') + "/.todoist", 'w') as configfile:
-            config.write(configfile)
+        print "Token is not specified. Set another in workflow."
+        sys.exit(1)
 
     api = TodoistAPI(token)
     today_actions(api)
