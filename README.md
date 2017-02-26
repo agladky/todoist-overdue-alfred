@@ -6,5 +6,5 @@ For installing, download [Todoist overdue.alfredworkflow](https://github.com/agl
 
 Also, you can download it [from Packal](http://www.packal.org/workflow/todoist-overdue-today).
 
-For using, insert you token as variable in "Value" field.
-Get it from "Todoist settings" -> "Account" -> "API token".
+For using, insert you token as variable in “Value” field.
+Get it from “Todoist settings” -> “Account” -> “API token”.
