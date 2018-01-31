@@ -184,6 +184,10 @@
 	</array>
 	<key>readme</key>
 	<string>
+Alfred workflow to move all overdue tasks to today in Todoist.
+
+For using, insert your token as variable in “Value” field.
+Get it from “Todoist settings → Integrations → API token”.
 	</string>
 	<key>uidata</key>
 	<dict>
@@ -220,8 +224,13 @@
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>note</key>
-			<string>Insert you token in "Value" field.
-Get it from "Todoist settings" -&gt; "Account" -&gt; "API token".</string>
+			<string>
+Get your token from “Todoist settings → Integrations → API token”.
+
+Insert it in “Value” field of variable “token”. 
+
+The variable name is case sensitive and must be “token”.
+			</string>
 			<key>xpos</key>
 			<integer>470</integer>
 			<key>ypos</key>

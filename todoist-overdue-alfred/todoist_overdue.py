@@ -7,12 +7,13 @@ import os.path
 
 sys.path.insert(0, os.path.join(os.getcwd(), 'lib'))
 
+import argparse
+import pytz
+
 from todoist import TodoistAPI
 from datetime import datetime
 from datetime import timedelta
 from dateutil.parser import parse
-import argparse
-import pytz
 
 
 def today_actions(todoist_api):
