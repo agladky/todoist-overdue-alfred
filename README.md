@@ -8,3 +8,5 @@ Also, you can download it [from a Packal](http://www.packal.org/workflow/todoist
 
 For using, insert your token as “token” variable in “Value” field.
 Get it from “Todoist settings → Integrations → API token”.
+
+![instuction](img/instruction.png)
